@@ -93,7 +93,7 @@ function strCount ($string) {
         $a = substr_count($string, 'b');
         return $a;
     } else {
-        return false;
+        return (false);
     }
 }
 $res = strCount ($string);
