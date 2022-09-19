@@ -25,7 +25,7 @@ $arr = [
         2=>'g2',
     ],
 ];
-$ind = 2;//номер для вложенных массивов
+$ind = 3;//номер для вложенных массивов
 
 function arrFindEl (array $arr, $ind) {
     foreach ($arr as $array) {
@@ -37,7 +37,6 @@ function arrFindEl (array $arr, $ind) {
         }
     }
 }
-
 
 $result = arrFindEl ($arr, $ind);
 
