@@ -9,7 +9,7 @@
 
 <?php
 
-$h3 = 'список';
+$h3 = 'Заголовок списка';
 $list = ['punkt_1', 'punkt_2', 'punkt_3'];
 $type_list = 'ol'; // Задаём тип списка
 function outputDate($h3, $list, $type_list) {
