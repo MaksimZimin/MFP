@@ -28,16 +28,16 @@
 
     print_r ($sum / count($rand_array));
 
-
+    echo '<br>';
     echo '3) Вывести 5 минимальных чисел из массива.' . '<br>';
 
     $min = asort($rand_array);
-    print_r(array_slice($rand_array, 1, 5));
+    print_r(array_slice($rand_array, 0, 5));
 
     echo '4) Вывести 5 максимальных чисел из массива.' . '<br>';
 
     $max = arsort($rand_array);
-    print_r(array_slice($rand_array, 1, 5));
+    print_r(array_slice($rand_array, 0, 5));
 
     echo '5) Отсортированный массив по возрастанию.' . '<br>';
 
