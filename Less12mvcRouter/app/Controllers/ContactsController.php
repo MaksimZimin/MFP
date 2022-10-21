@@ -2,15 +2,15 @@
 
 namespace App\Controllers;
 
-use App\Models\Pages;
+use App\Models\ModelContacts;
 use Core\View;
 
-class Home implements ControllerInterface
+class ContactsController implements ControllerInterface
 {
    public function index()
    {
-      $obj = new Pages;
-      $path = 'view1';
+      $obj = new ModelContacts;
+      $path = 'viewContacts';
       $date['people'] = $obj->getAll();
       View::generate($path, $date);
    }
