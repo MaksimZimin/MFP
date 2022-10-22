@@ -20,7 +20,7 @@ class Router
 		if (array_key_exists($this->exp, $this->config)) {
 			$classPath = 'App\Controllers\\' . $this->getClassName();
 		} else {
-			$obj = new Error404();
+			$classPath = new Error404();
 		}
 
 		if (class_exists($classPath)) {

@@ -8,10 +8,10 @@
 	</head>
 
 	<body>
-		<h1>I'm Admin</h1>
+		<h1>Contacts</h1>
 		<?php foreach ($people as $currentPeople) : ?>
 			<ul>
-				<li><?= print_r($currentPeople); ?></li>
+				<li><?php print_r($currentPeople); ?></li>
 			</ul>
 		<?php endforeach ?>
 	</body>
