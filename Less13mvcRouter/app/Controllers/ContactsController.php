@@ -17,6 +17,12 @@ class ContactsController implements ControllerInterface
 
    public function edit()
    {
-      return var_dump('i am home\edit');
+       $result = array_filter($_POST);
+       if (!empty($result));{
+       $obj = new ModelContacts();
+       $obj->createUser($result);
+   }
+       $path = 'user' . DIRECTORY_SEPARATOR . 'insertContacts';
+       View::generate($path);
    }
 }

@@ -17,6 +17,12 @@ class PostsController implements ControllerInterface
 
     public function edit()
     {
-        return var_dump('i am admin\edit');
+        $result = array_filter($_POST);
+        if (!empty($result));{
+        $obj = new ModelPosts();
+        $obj->createUser($result);
+    }
+        $path = 'user' . DIRECTORY_SEPARATOR . 'insertPosts';
+        View::generate($path);
     }
 }
