@@ -15,4 +15,7 @@ return [
 	'post' => 'PostsController:index',
     'posts/edit' => 'PostsController:edit',
     'post/edit' => 'PostsController:edit',
+    'login' => 'AuthController:login',
+    'register' => 'AuthController:register',
+
 ];
