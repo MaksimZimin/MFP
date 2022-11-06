@@ -14,7 +14,7 @@ class Sql
         $this->where->setWhere($condition);
     }
 
-    protected string $tableName;
+    public string $tableName;
 
     public function getTableName(): string
     {

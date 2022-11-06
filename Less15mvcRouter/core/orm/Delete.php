@@ -7,7 +7,6 @@ use Core\orm\common\Connector;
 class Delete extends Sql
 
 {
-    echo 'hello';
     public function getSQL(): string
     {
         $sql = 'DELETE FROM ' . $this->tableName;

@@ -1,17 +1,44 @@
 <?php
 
 namespace Core\orm;
+use Core\orm\common\Connector;
 
-use Core\orm\common\connector;
-
-/*class Update extends Sql
+class Update extends Sql
 {
-    public function getSQL(): string
+    protected $updName;
+    protected $values;
+
+    public function getUpdName()
     {
-        $sql = 'UPDATE FROM ' . $this->tableName;
-        if(!empty($this->where)) {
+        return $this->updName;
+    }
+
+    public function setUpdName($updName): void
+    {
+        $this->updName = $updName;
+    }
+
+    public function getValues()
+    {
+        return $this->values;
+    }
+
+    public function setValues($values): void
+    {
+        $this->values = $values;
+    }
+    public function update(): string
+    {
+        $sql = 'UPDATE ' . $this->tableName .= ' SET ' . $this->updName . ' FROM ' . $this->values;
+        if (!empty($this->where)) {
             $sql .= $this->where->getWhere();
         }
         return $sql;
     }
-}*/
+    public function execute ()
+    {
+        $connect = new Connector();
+        $PDO = $connect->connect();
+        return $PDO->query($this->update());
+    }
+}

@@ -30,9 +30,10 @@ class ContactsController implements ControllerInterface
 
     public function delete()
     {
+        $result = array_filter($_POST);
         $obj = new ModelContacts;
+        $obj->deleteContacts($result);
         $path = 'deleteContacts';
-        $date['people'] = $obj->getAll();
-        View::generate($path, $date);
+        View::generate($path);
     }
 }

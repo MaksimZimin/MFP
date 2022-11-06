@@ -9,14 +9,15 @@
 
 <body>
 <h1>Contacts</h1>
-<?php foreach ($people as $currentPeople) : ?>
+<form action="#" method="POST">
     <ul>
-        <form action="#" method="POST">
+        <?php /*foreach ($people as $currentPeople) : ?>
             <li><?php print_r($currentPeople); ?></li>
-            <button type="submit" >delete</button>
-        </form>
+        <?php endforeach */?>
     </ul>
-<?php endforeach ?>
+    <!--<button type="submit" >delete</button> -->
+    <div>Base was deleted successfully.</div>
+</form>
 </body>
 
 </html>

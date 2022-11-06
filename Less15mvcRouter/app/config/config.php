@@ -10,6 +10,7 @@ return [
 	'contacts' => 'ContactsController:index',
 	'contact' => 'ContactsController:index',
     'contact/delete' => 'ContactsController:delete',
+    'contacts/delete' => 'ContactsController:delete',
     'contacts/edit' => 'ContactsController:edit',
 	'contact/edit' => 'ContactsController:edit',
 	'posts' => 'PostsController:index',

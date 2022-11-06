@@ -26,7 +26,7 @@ class ModelContacts
         $objInsert->execute();
     }
 
-    public function deleteContacts(): void
+    public function deleteContacts()
     {
         $select = new Delete();
         $select->setTableName('contacts');
