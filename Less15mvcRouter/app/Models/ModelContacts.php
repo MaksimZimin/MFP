@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Core\orm\Insert;
 use Core\orm\Select;
+use Core\orm\Delete;
 
 class ModelContacts
 {
@@ -23,5 +24,12 @@ class ModelContacts
         $objInsert->setValue(array_values($data));
         $objInsert->setTableName('contacts');
         $objInsert->execute();
+    }
+
+    public function deleteContacts()
+    {
+        $select = new Delete();
+        $select->setTableName('contacts');
+        $select->execute();
     }
 }
