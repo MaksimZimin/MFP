@@ -34,7 +34,7 @@ class AuthController implements ControllerInterface
 
         if (!empty($data)) {
             $obj = new ModelUsers();
-            $result = $obj->auth($data['email'], $data['password']);
+            $_SESSION['user'] = $result = $obj->auth($data['email'], $data['password']);
             var_dump($result);
         }
         $path = 'auth' . DIRECTORY_SEPARATOR . 'insertLogin';

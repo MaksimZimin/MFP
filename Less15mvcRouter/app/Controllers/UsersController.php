@@ -9,6 +9,7 @@ class UsersController implements ControllerInterface
 {
     public function index()
     {
+        //var_dump($_SESSION['users']);
         $obj = new ModelUsers;
         $path = 'viewUsers';
         $date['people'] = $obj->getAll();

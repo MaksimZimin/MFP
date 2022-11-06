@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ModelContacts;
+use Core\orm\Delete;
 use Core\View;
 
 class ContactsController implements ControllerInterface
@@ -18,11 +19,20 @@ class ContactsController implements ControllerInterface
    public function edit()
    {
        $result = array_filter($_POST);
-       if (!empty($result));{
+       if (!empty($result));
+       {
        $obj = new ModelContacts();
        $obj->createUser($result);
    }
        $path = 'user' . DIRECTORY_SEPARATOR . 'insertContacts';
        View::generate($path);
    }
+
+    public function delete()
+    {
+        $obj = new ModelContacts;
+        $path = 'deleteContacts';
+        $date['people'] = $obj->getAll();
+        View::generate($path, $date);
+    }
 }
